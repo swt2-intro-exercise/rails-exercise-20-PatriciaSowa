@@ -10,6 +10,7 @@ class AuthorsController < ApplicationController
       # render plain: params[:author].inspect
       # end
       @author = Author.new(author_params)
+      puts author_params.inspect
 
       @author.save
       redirect_to @author
