@@ -1,11 +1,11 @@
 class Author < ApplicationRecord
     def initialize(first_name, last_name, homepage)
-        self.first_name = first_name
-        self.last_name = last_name
-        self.homepage = homepage
+        @author.first_name = first_name
+        @author.last_name = last_name
+        @author.homepage = homepage
     end
 
     def name
-         self.first_name + ' ' + self.last_name
+         @author.first_name + ' ' + @author.last_name
     end
 end
