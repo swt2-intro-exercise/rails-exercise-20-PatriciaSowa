@@ -5,20 +5,21 @@ class AuthorsController < ApplicationController
 
     def show
         @author = Author.find(params[:id])
-      end
+    end
 
     def new
-      end
+        @author = Author.new
+    end
 
     def create
-      # render plain: params[:author].inspect
-      # end
-      @author = Author.new(author_params)
-      puts author_params.inspect
+        @author = Author.new(author_params)
 
-      @author.save
-      redirect_to @author
-      end
+        if @author.save
+           redirect_to @author
+        else
+           render 'new'
+        end
+    end
 
       private
         def author_params

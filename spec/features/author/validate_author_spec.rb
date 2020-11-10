@@ -1,8 +1,8 @@
 require 'rails_helper'
 
-describe "Show page of an author", type: :feature do
+describe "Author should not validate without Lastname", type: :feature do
 
-  it "should show first_name, last_name and homepage of the author" do
+  it "Validation should fail, when creating an author without last name" do
     author = Author.new(first_name: "Alan", last_name: "", homepage: "http://wikipedia.org/Alan_Turing")
 
     expect(author).to_not be_valid
