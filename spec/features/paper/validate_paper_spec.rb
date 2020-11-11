@@ -12,7 +12,7 @@ describe "Paper validation", type: :feature do
     paper3 = Paper.new(title: "Best Practices", venue: "Max", year: nil)
     expect(paper3).to_not be_valid
 
-    paper4 = Paper.new(title: "Best Practices", venue: "Max", year: "2020")
+    paper4 = Paper.new(title: "Best Practices", venue: "Max", year: "Hello")
     expect(paper4).to_not be_valid
   end
 
