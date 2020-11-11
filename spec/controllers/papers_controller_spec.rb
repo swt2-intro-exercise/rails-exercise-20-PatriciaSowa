@@ -59,8 +59,9 @@ RSpec.describe PapersController, type: :controller do
 
   describe "GET #new" do
     it "returns a success response" do
-    get :new, params: {}, session: valid_session
-    expect(response).to be_successful
+        get :new, params: {}, session: valid_session
+        expect(response).to be_successful
+    end
   end
 
   describe "GET #edit" do
