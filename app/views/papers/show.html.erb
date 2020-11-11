@@ -1,6 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Detailpage</h1>
+
 <p>
   <strong>Title:</strong>
   <%= @paper.title %>
@@ -18,7 +19,7 @@
 
 <p>
   <strong>Author:</strong>
-  <%= @paper.authors.each do |author| %>
+  <% @paper.authors.each do |author| %>
     <%= author.name %>
   <% end %>
 </p>
