@@ -3,7 +3,7 @@ class PapersController < ApplicationController
 
   # GET /papers
   def index
-    @papers = Paper.only(params[:year])
+    @papers = Paper.year(params[:year])
   end
 
   # GET /papers/1
