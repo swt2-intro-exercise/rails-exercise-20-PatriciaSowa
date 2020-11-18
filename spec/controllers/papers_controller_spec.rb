@@ -29,7 +29,8 @@ RSpec.describe PapersController, type: :controller do
   # Paper. As you add validations to Paper, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) {
-    skip("Add a hash of attributes valid for your model")
+  {title: "MyTitle", venue: "AVenue", year: 2020}
+    # skip("Add a hash of attributes valid for your model")
   }
 
   let(:invalid_attributes) {
