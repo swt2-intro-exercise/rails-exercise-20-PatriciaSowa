@@ -29,12 +29,11 @@ RSpec.describe PapersController, type: :controller do
   # Paper. As you add validations to Paper, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) {
-  {title: "MyTitle", venue: "AVenue", year: 2020}
-    # skip("Add a hash of attributes valid for your model")
+    {title: "MyTitle", venue: "AVenue", year: 2020}
   }
 
   let(:invalid_attributes) {
-    skip("Add a hash of attributes invalid for your model")
+    {title: 123, venue: 2.4, year: "unknown"}
   }
 
   # This should return the minimal set of values that should be in the session
